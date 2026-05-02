@@ -1,6 +1,6 @@
 # 👨‍💻 👋 Hola, soy Samuel Correa
 
-**Estudiante de Ingeniería de Software | Desarrollador Backend & Full Stack**
+**Estudiante de Ingeniería de Software **
 
 ---
 
@@ -39,7 +39,7 @@ Soy un apasionado desarrollador de software, actualmente cursando Ingeniería de
 
 ### 📂 Proyectos Destacados
 
-* 💻 **[CODELABS Projects](https://codelabsprojects.com)**
+* 💻 **[Infrabytex projects](https://infrabytex.com)**
 * ⚙️ **ElionOS-Project** 
 * 🌱 **SmartDrip** 
 
