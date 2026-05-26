@@ -57,7 +57,7 @@ Soy un apasionado desarrollador de software, actualmente cursando Ingeniería de
 ### 🌍 Idiomas
 
 * 🇨🇴 **Español:** Nativo
-* 🇺🇸 **Inglés:** Intermedio (B1)
+* 🇺🇸 **Inglés:** avanzado (B2)
 
 ---
 
