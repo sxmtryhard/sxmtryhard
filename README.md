@@ -6,7 +6,7 @@
 
 ### 🚀 Sobre mí
 
-Soy un apasionado desarrollador de software, actualmente cursando Ingeniería de Software. Me especializo en backend y tengo experiencia desarrollando proyectos integrales. Siempre busco optimizar arquitecturas, aprender nuevas herramientas y construir soluciones eficientes.
+Soy un apasionado desarrollador de software, actualmente cursando Ingeniería de Software. Soy mas de Backend y tengo varios proyectos. Siempre busco optimizar arquitecturas, aprender nuevas herramientas y construir soluciones eficientes.
 
 ---
 
