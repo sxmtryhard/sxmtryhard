@@ -63,4 +63,4 @@ Soy un apasionado desarrollador de software, actualmente cursando Ingeniería de
 
 ### 💼 Disponibilidad
 
-✨ Abierto a proyectos freelance, colaboraciones open source y roles en backend y full stack.
+✨ Abierto a proyectos freelance ,colaboraciones open source y roles en backend y full stack.
