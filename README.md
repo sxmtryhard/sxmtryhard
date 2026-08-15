@@ -31,7 +31,7 @@ products.
 
 <br>
 
-```text
+text
 FOCUS
 ├── Backend Development
 ├── Full Stack Development
