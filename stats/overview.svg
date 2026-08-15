@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="760"
+    height="650"
+    viewBox="0 0 760 650"
+>
+
+    <!-- ================================================= -->
+    <!-- BACKGROUND                                        -->
+    <!-- ================================================= -->
+
+    <rect
+        width="760"
+        height="650"
+        fill="transparent"
+    />
+
+    <!-- ================================================= -->
+    <!-- HEADER                                            -->
+    <!-- ================================================= -->
+
+    <text
+        x="70"
+        y="70"
+        fill="#8b949e"
+        font-size="12"
+        font-family="monospace"
+        letter-spacing="2"
+    >
+        GITHUB / OVERVIEW
+    </text>
+
+    <text
+        x="70"
+        y="112"
+        fill="#f0f6fc"
+        font-size="27"
+        font-family="monospace"
+        font-weight="600"
+    >
+        SXMTRYHARD
+    </text>
+
+    <text
+        x="70"
+        y="138"
+        fill="#8b949e"
+        font-size="13"
+        font-family="monospace"
+    >
+        Software Engineer · Backend &amp; Full Stack
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- HEADER LINE                                       -->
+    <!-- ================================================= -->
+
+    <line
+        x1="70"
+        y1="170"
+        x2="690"
+        y2="170"
+        stroke="#21262d"
+        stroke-width="1"
+    />
+
+
+    <!-- ================================================= -->
+    <!-- METRICS                                           -->
+    <!-- ================================================= -->
+
+    <text
+        x="70"
+        y="215"
+        fill="#f0f6fc"
+        font-size="28"
+        font-family="monospace"
+    >
+        3
+    </text>
+
+    <text
+        x="70"
+        y="238"
+        fill="#8b949e"
+        font-size="10"
+        font-family="monospace"
+        letter-spacing="1"
+    >
+        REPOSITORIES
+    </text>
+
+
+    <text
+        x="250"
+        y="215"
+        fill="#f0f6fc"
+        font-size="28"
+        font-family="monospace"
+    >
+        0
+    </text>
+
+    <text
+        x="250"
+        y="238"
+        fill="#8b949e"
+        font-size="10"
+        font-family="monospace"
+        letter-spacing="1"
+    >
+        FOLLOWERS
+    </text>
+
+
+    <text
+        x="430"
+        y="215"
+        fill="#f0f6fc"
+        font-size="28"
+        font-family="monospace"
+    >
+        0
+    </text>
+
+    <text
+        x="430"
+        y="238"
+        fill="#8b949e"
+        font-size="10"
+        font-family="monospace"
+        letter-spacing="1"
+    >
+        STARS
+    </text>
+
+
+    <text
+        x="590"
+        y="215"
+        fill="#f0f6fc"
+        font-size="28"
+        font-family="monospace"
+    >
+        2
+    </text>
+
+    <text
+        x="590"
+        y="238"
+        fill="#8b949e"
+        font-size="10"
+        font-family="monospace"
+        letter-spacing="1"
+    >
+        FORKS
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- DIVIDER                                           -->
+    <!-- ================================================= -->
+
+    <line
+        x1="70"
+        y1="275"
+        x2="690"
+        y2="275"
+        stroke="#21262d"
+        stroke-width="1"
+    />
+
+
+    <!-- ================================================= -->
+    <!-- LANGUAGES                                         -->
+    <!-- ================================================= -->
+
+    <text
+        x="70"
+        y="320"
+        fill="#8b949e"
+        font-size="11"
+        font-family="monospace"
+        letter-spacing="2"
+    >
+        PRIMARY LANGUAGES
+    </text>
+
+
+    
+            <text
+                x="70"
+                y="390"
+                fill="#c9d1d9"
+                font-size="13"
+                font-family="monospace"
+            >
+                Python
+            </text>
+
+            <rect
+                x="180"
+                y="379"
+                width="430"
+                height="5"
+                rx="2.5"
+                fill="#21262d"
+            />
+
+            <rect
+                x="180"
+                y="379"
+                width="430"
+                height="5"
+                rx="2.5"
+                fill="#f0f6fc"
+            />
+
+            <text
+                x="635"
+                y="390"
+                fill="#8b949e"
+                font-size="12"
+                font-family="monospace"
+            >
+                100%
+            </text>
+            
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER                                            -->
+    <!-- ================================================= -->
+
+    <line
+        x1="70"
+        y1="570"
+        x2="690"
+        y2="570"
+        stroke="#21262d"
+        stroke-width="1"
+    />
+
+    <text
+        x="70"
+        y="605"
+        fill="#8b949e"
+        font-size="11"
+        font-family="monospace"
+    >
+        github.com/sxmtryhard
+    </text>
+
+    <text
+        x="690"
+        y="605"
+        fill="#484f58"
+        font-size="11"
+        font-family="monospace"
+        text-anchor="end"
+    >
+        PROFILE / SXMTRYHARD
+    </text>
+
+</svg>
