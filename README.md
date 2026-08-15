@@ -1,4 +1,10 @@
 <p align="center">
+  <img src="./profile.gif" width="700" alt="SXMTRYHARD">
+</p>
+
+<br>
+
+<p align="center">
   <img src="./ascii.svg" width="900" alt="SXMTRYHARD">
 </p>
 
@@ -18,20 +24,89 @@
 
 ---
 
-## About Me
+## Tech Stack
 
-I'm a Software Engineering student passionate about building
-software, designing interfaces and understanding how systems
-work from the inside out.
+### Frontend
 
-I enjoy turning ideas into real products — from the architecture
-and backend to the final pixel of the interface.
+<p>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css">
+</p>
 
-```text
-FOCUS
-├── Software Engineering
-├── Full Stack Development
-├── Web Applications
-├── UI / UX
-├── System Architecture
-└── Artificial Intelligence
+### Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,nodejs,java,mysql">
+</p>
+
+### Tools & Environment
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker">
+</p>
+
+---
+
+## Featured Projects
+
+### OralEase
+
+Dental management software designed to simplify  
+the administration of dental clinics.
+
+**Stack**
+
+`React` `TailwindCSS` `Node.js` `MySQL`
+
+---
+
+### Study Platform
+
+A guided learning platform focused on helping students  
+understand complex topics through personalized learning  
+experiences.
+
+**Stack**
+
+`React` `Next.js` `Python` `AI`
+
+---
+
+## GitHub Stats
+
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=sxmtryhard&show_icons=true&hide_border=true&theme=transparent"
+    height="170"
+  />
+
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxmtryhard&layout=compact&hide_border=true&theme=transparent"
+    height="170"
+  />
+</p>
+
+---
+
+## Contribution
+
+<p align="center">
+  <img
+    src="https://github-readme-streak-stats.herokuapp.com/?user=sxmtryhard&hide_border=true&theme=transparent"
+  />
+</p>
+
+---
+
+<p align="center">
+  <a href="https://github.com/sxmtryhard">
+    <img
+      src="https://img.shields.io/badge/GitHub-SXMTRYHARD-000000?style=for-the-badge&logo=github&logoColor=white"
+    />
+  </a>
+</p>
+
+<br>
+
+<p align="center">
+  <sub>Designed & built by <strong>SXMTRYHARD</strong></sub>
+</p>
