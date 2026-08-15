@@ -78,6 +78,22 @@ Stack
 
 Java · Spring Boot
 
-GitHub
-<p align="center"> <img src="./stats/overview.svg" width="760" alt="SXMTRYHARD GitHub Overview" > </p>
-<p align="center"> <a href="https://github.com/sxmtryhard"> <img src="https://img.shields.io/badge/GitHub-SXMTRYHARD-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" > </a> </p> <br> <p align="center"> <sub>Designed & built by <strong>SXMTRYHARD</strong></sub> </p> ```
+## GitHub
+
+<p align="center">
+  <img
+    src="./stats/overview.svg"
+    width="760"
+    alt="SXMTRYHARD GitHub Overview"
+  >
+</p>
+
+<br>
+
+<p align="center">
+  <img
+    src="./stats/activity.svg"
+    width="760"
+    alt="SXMTRYHARD GitHub Activity"
+  >
+</p>
