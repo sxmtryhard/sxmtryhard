@@ -3,7 +3,7 @@ import os
 import urllib.request
 from pathlib import Path
 from collections import Counter
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 
 
 # ============================================================
@@ -496,13 +496,13 @@ def generate_overview_svg(
 
 
 # ============================================================
-# ACTIVITY CELL LEVEL
+# CONTRIBUTION LEVEL
 # ============================================================
 
 def get_cell_opacity(level):
 
     levels = {
-        "NONE": 0.12,
+        "NONE": 0.10,
         "FIRST_QUARTILE": 0.28,
         "SECOND_QUARTILE": 0.48,
         "THIRD_QUARTILE": 0.72,
@@ -511,7 +511,7 @@ def get_cell_opacity(level):
 
     return levels.get(
         level,
-        0.12
+        0.10
     )
 
 
@@ -527,14 +527,64 @@ def generate_activity_svg(calendar):
         "totalContributions"
     ]
 
-    width = 760
-    height = 330
+    # --------------------------------------------------------
+    # Flatten days
+    # --------------------------------------------------------
+
+    days = []
+
+    for week in weeks:
+
+        for day in week[
+            "contributionDays"
+        ]:
+
+            days.append(day)
+
+    # --------------------------------------------------------
+    # Active days
+    # --------------------------------------------------------
+
+    active_days = sum(
+        1
+        for day in days
+        if day["contributionCount"] > 0
+    )
+
+    # --------------------------------------------------------
+    # Longest streak
+    # --------------------------------------------------------
+
+    longest_streak = 0
+    current_streak = 0
+
+    for day in days:
+
+        if day["contributionCount"] > 0:
+
+            current_streak += 1
+
+            longest_streak = max(
+                longest_streak,
+                current_streak
+            )
+
+        else:
+
+            current_streak = 0
+
+    # --------------------------------------------------------
+    # SVG dimensions
+    # --------------------------------------------------------
+
+    width = 900
+    height = 390
 
     cell_size = 13
     gap = 4
 
     start_x = 70
-    start_y = 110
+    start_y = 170
 
     output = []
 
@@ -554,11 +604,13 @@ def generate_activity_svg(calendar):
     fill="transparent"
 />
 
+<!-- HEADER -->
+
 <text
     x="70"
-    y="55"
+    y="42"
     fill="#8b949e"
-    font-size="12"
+    font-size="11"
     font-family="monospace"
     letter-spacing="2"
 >
@@ -567,32 +619,193 @@ def generate_activity_svg(calendar):
 
 <text
     x="70"
-    y="82"
+    y="73"
     fill="#f0f6fc"
-    font-size="19"
+    font-size="22"
     font-family="monospace"
+    font-weight="600"
+>
+    CONTRIBUTION HISTORY
+</text>
+
+<!-- TOTAL CONTRIBUTIONS -->
+
+<text
+    x="70"
+    y="115"
+    fill="#f0f6fc"
+    font-size="25"
+    font-family="monospace"
+>
+    {total_contributions}
+</text>
+
+<text
+    x="70"
+    y="135"
+    fill="#8b949e"
+    font-size="9"
+    font-family="monospace"
+    letter-spacing="1"
 >
     CONTRIBUTIONS
 </text>
 
+<!-- ACTIVE DAYS -->
+
 <text
-    x="690"
-    y="82"
-    fill="#8b949e"
-    font-size="12"
+    x="245"
+    y="115"
+    fill="#f0f6fc"
+    font-size="25"
     font-family="monospace"
-    text-anchor="end"
 >
-    {total_contributions} / LAST YEAR
+    {active_days}
 </text>
+
+<text
+    x="245"
+    y="135"
+    fill="#8b949e"
+    font-size="9"
+    font-family="monospace"
+    letter-spacing="1"
+>
+    ACTIVE DAYS
+</text>
+
+<!-- LONGEST STREAK -->
+
+<text
+    x="420"
+    y="115"
+    fill="#f0f6fc"
+    font-size="25"
+    font-family="monospace"
+>
+    {longest_streak}
+</text>
+
+<text
+    x="420"
+    y="135"
+    fill="#8b949e"
+    font-size="9"
+    font-family="monospace"
+    letter-spacing="1"
+>
+    LONGEST STREAK
+</text>
+
+<line
+    x1="70"
+    y1="150"
+    x2="830"
+    y2="150"
+    stroke="#21262d"
+    stroke-width="1"
+/>
+
 '''
     )
 
-    for week_index, week in enumerate(weeks):
+    # --------------------------------------------------------
+    # Day labels
+    # --------------------------------------------------------
 
-        days = week["contributionDays"]
+    labels = [
+        ("Mon", 0),
+        ("Wed", 2),
+        ("Fri", 4)
+    ]
 
-        for day in days:
+    for label, index in labels:
+
+        y = (
+            start_y
+            + index * (
+                cell_size + gap
+            )
+            + 10
+        )
+
+        output.append(
+            f'''
+            <text
+                x="18"
+                y="{y}"
+                fill="#8b949e"
+                font-size="9"
+                font-family="monospace"
+            >
+                {label}
+            </text>
+            '''
+        )
+
+    # --------------------------------------------------------
+    # Month labels
+    # --------------------------------------------------------
+
+    previous_month = None
+
+    for week_index, week in enumerate(
+        weeks
+    ):
+
+        if not week[
+            "contributionDays"
+        ]:
+
+            continue
+
+        first_day = week[
+            "contributionDays"
+        ][0]
+
+        date = datetime.strptime(
+            first_day["date"],
+            "%Y-%m-%d"
+        )
+
+        month = date.strftime("%b")
+
+        if month != previous_month:
+
+            x = (
+                start_x
+                + week_index * (
+                    cell_size + gap
+                )
+            )
+
+            output.append(
+                f'''
+                <text
+                    x="{x}"
+                    y="163"
+                    fill="#8b949e"
+                    font-size="9"
+                    font-family="monospace"
+                >
+                    {month}
+                </text>
+                '''
+            )
+
+            previous_month = month
+
+    # --------------------------------------------------------
+    # Contribution grid
+    # --------------------------------------------------------
+
+    for week_index, week in enumerate(
+        weeks
+    ):
+
+        for day in week[
+            "contributionDays"
+        ]:
 
             date = datetime.strptime(
                 day["date"],
@@ -619,6 +832,10 @@ def generate_activity_svg(calendar):
                 day["contributionLevel"]
             )
 
+            count = day[
+                "contributionCount"
+            ]
+
             output.append(
                 f'''
                 <rect
@@ -633,47 +850,51 @@ def generate_activity_svg(calendar):
                     <title>
                         {escape_svg(day["date"])}
                         ·
-                        {day["contributionCount"]}
+                        {count}
                         contributions
                     </title>
                 </rect>
                 '''
             )
 
+    # --------------------------------------------------------
+    # Legend
+    # --------------------------------------------------------
+
     output.append(
         '''
         <line
             x1="70"
-            y1="250"
-            x2="690"
-            y2="250"
+            y1="275"
+            x2="830"
+            y2="275"
             stroke="#21262d"
             stroke-width="1"
         />
 
         <text
             x="70"
-            y="278"
+            y="304"
             fill="#8b949e"
-            font-size="11"
+            font-size="9"
             font-family="monospace"
         >
             LESS
         </text>
 
         <rect
-            x="112"
-            y="268"
+            x="110"
+            y="294"
             width="12"
             height="12"
             rx="3"
             fill="#f0f6fc"
-            opacity="0.12"
+            opacity="0.10"
         />
 
         <rect
-            x="132"
-            y="268"
+            x="130"
+            y="294"
             width="12"
             height="12"
             rx="3"
@@ -682,8 +903,8 @@ def generate_activity_svg(calendar):
         />
 
         <rect
-            x="152"
-            y="268"
+            x="150"
+            y="294"
             width="12"
             height="12"
             rx="3"
@@ -692,8 +913,8 @@ def generate_activity_svg(calendar):
         />
 
         <rect
-            x="172"
-            y="268"
+            x="170"
+            y="294"
             width="12"
             height="12"
             rx="3"
@@ -702,8 +923,8 @@ def generate_activity_svg(calendar):
         />
 
         <rect
-            x="192"
-            y="268"
+            x="190"
+            y="294"
             width="12"
             height="12"
             rx="3"
@@ -712,20 +933,20 @@ def generate_activity_svg(calendar):
         />
 
         <text
-            x="215"
-            y="278"
+            x="214"
+            y="304"
             fill="#8b949e"
-            font-size="11"
+            font-size="9"
             font-family="monospace"
         >
             MORE
         </text>
 
         <text
-            x="690"
-            y="278"
+            x="830"
+            y="304"
             fill="#484f58"
-            font-size="11"
+            font-size="9"
             font-family="monospace"
             text-anchor="end"
         >
@@ -804,8 +1025,8 @@ def main():
     )
 
     print()
-    print(f"✓ {OVERVIEW_FILE}")
-    print(f"✓ {ACTIVITY_FILE}")
+    print(f"✓ Generated: {OVERVIEW_FILE}")
+    print(f"✓ Generated: {ACTIVITY_FILE}")
 
     print()
     print("========================================")
@@ -813,6 +1034,10 @@ def main():
     print("========================================")
     print()
 
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
     main()
