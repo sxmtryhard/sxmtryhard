@@ -5,108 +5,81 @@
 <br>
 
 <p align="center">
-  <img src="./ascii.svg" width="900" alt="SXMTRYHARD">
+  <strong>Software Engineer · Backend & Full Stack Developer</strong>
 </p>
 
 <p align="center">
-  <strong>Software Engineer · Full Stack Developer</strong>
-</p>
-
-<p align="center">
-  I build modern, scalable and carefully designed digital experiences.
+  Building modern software, scalable systems and thoughtful digital experiences.
 </p>
 
 <br>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,javascript,typescript,react,nextjs,nodejs,mysql,git,github,linux,tailwind&perline=6">
+  <img src="https://skillicons.dev/icons?i=java,spring,python,javascript,typescript,react,nextjs,nodejs,mysql,git,github,linux,tailwind&perline=6">
 </p>
 
 ---
 
-## Tech Stack
+## About Me
 
-### Frontend
+I'm a Software Engineering student focused on backend and
+full-stack development.
 
-<p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css">
-</p>
+I enjoy designing software architectures, building APIs,
+developing web applications and turning ideas into real
+products.
 
-### Backend
+```text
+FOCUS
+├── Backend Development
+├── Full Stack Development
+├── Software Architecture
+├── Web Applications
+├── APIs & Systems
+└── Artificial Intelligence
 
-<p>
-  <img src="https://skillicons.dev/icons?i=python,nodejs,java,mysql">
-</p>
+Tech Stack
+Backend
+<p> <img src="https://skillicons.dev/icons?i=java,spring,python,nodejs,mysql"> </p>
+Frontend
+<p> <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css"> </p>
+Tools & Environment
+<p> <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker"> </p>
+Featured Projects
+OralEase
 
-### Tools & Environment
+Dental management software designed to simplify the
+administration of dental clinics.
 
-<p>
-  <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker">
-</p>
+Stack
 
----
+React TailwindCSS Node.js MySQL
 
-## Featured Projects
+Study Platform
 
-### OralEase
-
-Dental management software designed to simplify  
-the administration of dental clinics.
-
-**Stack**
-
-`React` `TailwindCSS` `Node.js` `MySQL`
-
----
-
-### Study Platform
-
-A guided learning platform focused on helping students  
-understand complex topics through personalized learning  
+A guided learning platform designed to help students
+understand complex topics through personalized learning
 experiences.
 
-**Stack**
+Stack
 
-`React` `Next.js` `Python` `AI`
+React Next.js Python AI
 
----
+ElionOS
 
-## GitHub Stats
+A software project focused on exploring system architecture,
+development and low-level concepts.
 
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=sxmtryhard&show_icons=true&hide_border=true&theme=transparent"
-    height="170"
-  />
+Stack
 
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxmtryhard&layout=compact&hide_border=true&theme=transparent"
-    height="170"
-  />
+Java Spring Boot
+
+GitHub
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=sxmtryhard&show_icons=true&hide_border=true&theme=github_dark&cache_seconds=86400" height="170" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxmtryhard&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400" height="170" />
+
 </p>
-
----
-
-## Contribution
-
-<p align="center">
-  <img
-    src="https://github-readme-streak-stats.herokuapp.com/?user=sxmtryhard&hide_border=true&theme=transparent"
-  />
-</p>
-
----
-
-<p align="center">
-  <a href="https://github.com/sxmtryhard">
-    <img
-      src="https://img.shields.io/badge/GitHub-SXMTRYHARD-000000?style=for-the-badge&logo=github&logoColor=white"
-    />
-  </a>
-</p>
-
-<br>
-
-<p align="center">
-  <sub>Designed & built by <strong>SXMTRYHARD</strong></sub>
-</p>
+Contribution
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=sxmtryhard&hide_border=true&theme=dark" /> </p>
+<p align="center"> <a href="https://github.com/sxmtryhard"> <img src="https://img.shields.io/badge/GitHub-SXMTRYHARD-181717?style=for-the-badge&logo=github&logoColor=white" /> </a> </p> <br> <p align="center"> <sub>Designed & built by <strong>SXMTRYHARD</strong></sub> </p> ```
