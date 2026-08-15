@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: write
-  id-token: write
 
 jobs:
   update-stats:
@@ -30,6 +29,8 @@ jobs:
           python-version: "3.x"
 
       - name: Generate statistics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/generate_stats.py
 
@@ -38,7 +39,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add stats/overview.svg
+          git add stats/
 
           if git diff --cached --quiet; then
             echo "No changes detected."
