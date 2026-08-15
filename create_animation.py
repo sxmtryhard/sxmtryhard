@@ -1,4 +1,4 @@
-from PIL import Image, ImageFont
+from PIL import Image, ImageFont, ImageDraw
 import random
 import os
 
@@ -10,33 +10,25 @@ import os
 INPUT_IMAGE = "persona.png"
 OUTPUT_GIF = "profile.gif"
 
-# Resolución ASCII
 WIDTH = 180
 
-# Caracteres: claro → oscuro
 CHARS = " .,:;*+=?%#@"
 
-# Tamaño visual
 FONT_SIZE = 6
 CHAR_WIDTH = 3.6
 LINE_HEIGHT = 6
 
-# Animación
 FRAMES = 30
-FRAME_DURATION = 80       # milisegundos entre frames
+FRAME_DURATION = 80
+FINAL_DURATION = 3000
 
-# Tiempo que permanece la imagen final
-FINAL_DURATION = 1800
+PADDING = 40
 
-# Fondo
-BACKGROUND = (0, 0, 0)
-
-# Semilla para que el patrón sea siempre igual
 random.seed(42)
 
 
 # ============================================================
-# CARGAR FUENTE
+# FUENTE
 # ============================================================
 
 font_paths = [
@@ -48,27 +40,17 @@ font_paths = [
 font = None
 
 for path in font_paths:
-
     if os.path.exists(path):
-
-        font = ImageFont.truetype(
-            path,
-            FONT_SIZE
-        )
-
+        font = ImageFont.truetype(path, FONT_SIZE)
         break
 
-
 if font is None:
-
     print("⚠️ No se encontró una fuente monoespaciada.")
-    print("Usando fuente predeterminada.")
-
     font = ImageFont.load_default()
 
 
 # ============================================================
-# CARGAR PERSONA
+# CARGAR IMAGEN
 # ============================================================
 
 print("📷 Cargando persona.png...")
@@ -81,19 +63,15 @@ image = Image.open(INPUT_IMAGE).convert("RGBA")
 # ============================================================
 
 alpha = image.getchannel("A")
-
 bbox = alpha.getbbox()
 
 if bbox:
-
     image = image.crop(bbox)
 
 
 # ============================================================
-# AÑADIR MARGEN
+# MARGEN TRANSPARENTE
 # ============================================================
-
-PADDING = 40
 
 new_width = image.width + PADDING * 2
 new_height = image.height + PADDING * 2
@@ -120,7 +98,9 @@ image = canvas
 aspect_ratio = image.height / image.width
 
 height = int(
-    WIDTH * aspect_ratio * 0.5
+    WIDTH *
+    aspect_ratio *
+    0.5
 )
 
 image = image.resize(
@@ -130,37 +110,29 @@ image = image.resize(
 
 
 # ============================================================
-# PREPARAR CARACTERES
+# CREAR CARACTERES
 # ============================================================
 
 print("🔤 Analizando píxeles...")
 
 characters = []
 
-
 for y in range(height):
 
     for x in range(WIDTH):
 
-        r, g, b, alpha = image.getpixel(
-            (x, y)
-        )
+        r, g, b, alpha = image.getpixel((x, y))
 
-        # Transparente → nada
+        # Transparencia
         if alpha < 50:
-
             continue
 
-
-        # Brillo
         brightness = int(
             0.299 * r +
             0.587 * g +
             0.114 * b
         )
 
-
-        # Brillo → carácter
         index = int(
             (255 - brightness)
             / 255
@@ -169,23 +141,16 @@ for y in range(height):
 
         char = CHARS[index]
 
-
         if char == " ":
-
             continue
 
-
         characters.append(
-            (
-                x,
-                y,
-                char
-            )
+            (x, y, char)
         )
 
 
 # ============================================================
-# ORDEN ALEATORIO DE APARICIÓN
+# ORDEN ALEATORIO
 # ============================================================
 
 print("🎲 Preparando animación...")
@@ -198,16 +163,18 @@ random.shuffle(characters)
 # ============================================================
 
 gif_width = int(
-    WIDTH * CHAR_WIDTH
+    WIDTH *
+    CHAR_WIDTH
 )
 
 gif_height = int(
-    height * LINE_HEIGHT
+    height *
+    LINE_HEIGHT
 )
 
 
 # ============================================================
-# GENERAR FRAMES
+# CREAR FRAMES RGBA
 # ============================================================
 
 frames = []
@@ -225,49 +192,39 @@ for frame_number in range(FRAMES):
         frame_number + 1
     ) / FRAMES
 
-
     visible = int(
-        total * progress
+        total *
+        progress
     )
 
-
-    # Crear frame negro
+    # IMPORTANTE:
+    # Frame completamente transparente
     frame = Image.new(
-        "RGB",
+        "RGBA",
         (
             gif_width,
             gif_height
         ),
-        BACKGROUND
+        (0, 0, 0, 0)
     )
 
-
-    # Dibujar caracteres
-    draw = Image.ImageDraw if False else None
-
-    from PIL import ImageDraw
-
     draw = ImageDraw.Draw(frame)
-
 
     for i in range(visible):
 
         x, y, char = characters[i]
 
-
         draw.text(
             (
-                x * CHAR_WIDTH,
-                y * LINE_HEIGHT
+                int(x * CHAR_WIDTH),
+                int(y * LINE_HEIGHT)
             ),
             char,
             font=font,
-            fill=(255, 255, 255)
+            fill=(255, 255, 255, 255)
         )
 
-
     frames.append(frame)
-
 
     print(
         f"   Frame {frame_number + 1}/{FRAMES}"
@@ -275,12 +232,101 @@ for frame_number in range(FRAMES):
 
 
 # ============================================================
-# AÑADIR FRAME FINAL
+# FRAME FINAL
 # ============================================================
 
 final_frame = frames[-1].copy()
 
 frames.append(final_frame)
+
+
+# ============================================================
+# CONVERTIR RGBA → GIF CON TRANSPARENCIA REAL
+# ============================================================
+
+print("🎨 Preparando transparencia del GIF...")
+
+
+gif_frames = []
+
+
+for frame in frames:
+
+    # Crear una copia RGB
+    rgb = Image.new(
+        "RGB",
+        frame.size,
+        (0, 0, 0)
+    )
+
+    # Máscara alpha
+    alpha = frame.getchannel("A")
+
+    # Componer sobre negro temporalmente
+    rgb.paste(
+        frame,
+        mask=alpha
+    )
+
+    # Convertir a paleta
+    palette_frame = rgb.quantize(
+        colors=255,
+        method=Image.Quantize.MEDIANCUT
+    )
+
+    # Obtener píxeles alpha
+    alpha_data = alpha.load()
+    palette_data = palette_frame.load()
+
+    # Crear color transparente
+    transparent_index = 255
+
+    # Cambiar todos los píxeles transparentes
+    # al índice transparente
+    for y in range(frame.height):
+
+        for x in range(frame.width):
+
+            if alpha_data[x, y] < 128:
+
+                palette_data[x, y] = transparent_index
+
+    # Crear paleta con 256 colores
+    palette = palette_frame.getpalette()
+
+    if palette is None:
+        palette = []
+
+    palette = list(palette)
+
+    while len(palette) < 768:
+        palette.append(0)
+
+    # El índice 255 será transparente
+    palette[transparent_index * 3] = 0
+    palette[transparent_index * 3 + 1] = 0
+    palette[transparent_index * 3 + 2] = 0
+
+    palette_frame.putpalette(palette)
+
+    palette_frame.info["transparency"] = transparent_index
+
+    gif_frames.append(
+        palette_frame
+    )
+
+
+# ============================================================
+# DURACIONES
+# ============================================================
+
+durations = [
+    FRAME_DURATION
+] * (len(gif_frames) - 1)
+
+durations.append(
+    FINAL_DURATION
+)
 
 
 # ============================================================
@@ -290,22 +336,20 @@ frames.append(final_frame)
 print("💾 Guardando profile.gif...")
 
 
-durations = [
-    FRAME_DURATION
-] * (len(frames) - 1)
-
-durations.append(
-    FINAL_DURATION
-)
-
-
-frames[0].save(
+gif_frames[0].save(
     OUTPUT_GIF,
     save_all=True,
-    append_images=frames[1:],
+    append_images=gif_frames[1:],
     duration=durations,
-    loop=0,
-    optimize=True
+
+    # SOLO UNA VEZ
+    loop=1,
+
+    transparency=255,
+
+    disposal=2,
+
+    optimize=False
 )
 
 
@@ -318,7 +362,8 @@ print("========================================")
 print("       ✅ GIF CREADO CORRECTAMENTE")
 print("========================================")
 print(f"📁 Archivo: {OUTPUT_GIF}")
-print(f"🎞️ Frames: {len(frames)}")
+print(f"🎞️ Frames: {len(gif_frames)}")
 print(f"📐 Tamaño: {gif_width} × {gif_height}")
-print("🔁 Loop: infinito")
+print("🎨 Fondo: TRANSPARENTE")
+print("🔁 Animación: UNA SOLA VEZ")
 print("========================================")
