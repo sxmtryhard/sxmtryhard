@@ -1,58 +1,37 @@
 <p align="center">
-  <img src="./profile.gif" width="700">
+  <img src="./ascii.svg" width="900" alt="SXMTRYHARD">
 </p>
-
-<h1 align="center">Samuel Correa</h1>
 
 <p align="center">
-  Software Engineering Student · Developer · Builder
+  <strong>Software Engineer · Full Stack Developer</strong>
 </p>
-          
-                    
 
-                    SAMUEL CORREA
-             Software Engineering Student
+<p align="center">
+  I build modern, scalable and carefully designed digital experiences.
+</p>
 
-          ───────────────────────────────
+<br>
 
-             ABOUT ME     TECH STACK
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,java,javascript,typescript,react,nextjs,nodejs,mysql,git,github,linux,tailwind&perline=6">
+</p>
 
-             PROJECTS       GITHUB
+---
 
-                    CONTACT
+## About Me
 
-          ───────────────────────────────
+I'm a Software Engineering student passionate about building
+software, designing interfaces and understanding how systems
+work from the inside out.
 
-                     ABOUT ME
+I enjoy turning ideas into real products — from the architecture
+and backend to the final pixel of the interface.
 
-          I build software with purpose.
-          I like turning ideas into products.
-
-          ───────────────────────────────
-
-                    TECH STACK
-
-       PYTHON · JAVA · JAVASCRIPT · REACT
-       NEXT.JS · SQL · GIT · LINUX · ...
-
-          ───────────────────────────────
-
-                     PROJECTS
-
-                ORALEASE
-                [ project ]
-
-                [ PPI PROJECT ]
-                [ project ]
-
-          ───────────────────────────────
-
-                     GITHUB
-
-                [ stats ]
-                [ streak ]
-                [ languages ]
-
-          ───────────────────────────────
-
-                     CONTACT
+```text
+FOCUS
+├── Software Engineering
+├── Full Stack Development
+├── Web Applications
+├── UI / UX
+├── System Architecture
+└── Artificial Intelligence
