@@ -1,13 +1,3 @@
-
-Eso indica que **el README terminó con un bloque de código abierto/cerrado incorrectamente**. Probablemente al copiar el código anterior se metieron los delimitadores de Markdown que yo usé para mostrarte el código.
-
-### Vamos a arreglarlo bien
-
-**No copies los ```markdown ni los ``` del principio/final.**
-
-Tu archivo `README.md` debe empezar directamente con:
-
-```html
 <p align="center">
   <img src="./profile.gif" width="700" alt="SXMTRYHARD">
 </p>
@@ -25,7 +15,7 @@ Tu archivo `README.md` debe empezar directamente con:
 <br>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,python,javascript,typescript,react,nextjs,nodejs,mysql,git,github,linux,tailwind&perline=6">
+  <img src="https://skillicons.dev/icons?i=java,spring,python,javascript,typescript,react,nextjs,nodejs,mysql,git,github,linux,tailwind&perline=6" alt="Tech Stack">
 </p>
 
 ---
@@ -39,6 +29,8 @@ I enjoy designing software architectures, building APIs,
 developing web applications and turning ideas into real
 products.
 
+<br>
+
 ```text
 FOCUS
 ├── Backend Development
@@ -47,14 +39,13 @@ FOCUS
 ├── Web Applications
 ├── APIs & Systems
 └── Artificial Intelligence
-
 Tech Stack
 Backend
-<p align="left"> <img src="https://skillicons.dev/icons?i=java,spring,python,nodejs,mysql"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=java,spring,python,nodejs,mysql" alt="Backend"> </p>
 Frontend
-<p align="left"> <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css" alt="Frontend"> </p>
 Tools & Environment
-<p align="left"> <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker" alt="Tools"> </p>
 Featured Projects
 OralEase
 
