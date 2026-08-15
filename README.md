@@ -1,3 +1,13 @@
+
+Eso indica que **el README terminó con un bloque de código abierto/cerrado incorrectamente**. Probablemente al copiar el código anterior se metieron los delimitadores de Markdown que yo usé para mostrarte el código.
+
+### Vamos a arreglarlo bien
+
+**No copies los ```markdown ni los ``` del principio/final.**
+
+Tu archivo `README.md` debe empezar directamente con:
+
+```html
 <p align="center">
   <img src="./profile.gif" width="700" alt="SXMTRYHARD">
 </p>
@@ -40,11 +50,11 @@ FOCUS
 
 Tech Stack
 Backend
-<p> <img src="https://skillicons.dev/icons?i=java,spring,python,nodejs,mysql"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=java,spring,python,nodejs,mysql"> </p>
 Frontend
-<p> <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css"> </p>
 Tools & Environment
-<p> <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker"> </p>
+<p align="left"> <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker"> </p>
 Featured Projects
 OralEase
 
@@ -53,7 +63,7 @@ administration of dental clinics.
 
 Stack
 
-React TailwindCSS Node.js MySQL
+React · TailwindCSS · Node.js · MySQL
 
 Study Platform
 
@@ -63,7 +73,7 @@ experiences.
 
 Stack
 
-React Next.js Python AI
+React · Next.js · Python · AI
 
 ElionOS
 
@@ -72,14 +82,14 @@ development and low-level concepts.
 
 Stack
 
-Java Spring Boot
+Java · Spring Boot
 
-GitHub
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=sxmtryhard&show_icons=true&hide_border=true&theme=github_dark&cache_seconds=86400" height="170" />
+GitHub Stats
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=sxmtryhard&show_icons=true&hide_border=true&theme=github_dark" height="170" alt="GitHub Stats" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxmtryhard&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400" height="170" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sxmtryhard&layout=compact&hide_border=true&theme=github_dark" height="170" alt="Top Languages" />
 
 </p>
 Contribution
-<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=sxmtryhard&hide_border=true&theme=dark" /> </p>
-<p align="center"> <a href="https://github.com/sxmtryhard"> <img src="https://img.shields.io/badge/GitHub-SXMTRYHARD-181717?style=for-the-badge&logo=github&logoColor=white" /> </a> </p> <br> <p align="center"> <sub>Designed & built by <strong>SXMTRYHARD</strong></sub> </p> ```
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=sxmtryhard&hide_border=true&theme=dark" alt="GitHub Streak" /> </p>
+<p align="center"> <a href="https://github.com/sxmtryhard"> <img src="https://img.shields.io/badge/GitHub-SXMTRYHARD-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /> </a> </p> <br> <p align="center"> <sub>Designed & built by <strong>SXMTRYHARD</strong></sub> </p>
