@@ -31,7 +31,6 @@
   </picture>
 </p>
 ## Skills
-Selected stack and skill badges will be generated from the GitHub profile and README strategy.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stack?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -39,7 +38,6 @@ Selected stack and skill badges will be generated from the GitHub profile and RE
   </picture>
 </p>
 ## GitHub Stats
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
