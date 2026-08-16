@@ -2,11 +2,8 @@
 
 > Student of Software Engineering
 
-**Theme:** Aurora · **Style:** Creative · **Agent:** Full-Stack Engineer
+ Full-Stack Engineer
 
-## Header
-> Editing this section in the inspector.
-Hi, I'm **sxmtryhard**. This README is tuned for **personal brand** with a Aurora visual system.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/hero?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
