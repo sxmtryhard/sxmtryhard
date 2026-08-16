@@ -1,4 +1,4 @@
-# sxmtryhard
+# Samuel Correa
 
 > Student of Software Engineering
 
