@@ -26,7 +26,7 @@ Hi, I'm **sxmtryhard**. This README is tuned for **personal brand** with a Auror
   </picture>
 </p>
 ## About Me
-Shapes the short profile story and positioning.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/about?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -42,7 +42,7 @@ Selected stack and skill badges will be generated from the GitHub profile and RE
   </picture>
 </p>
 ## GitHub Stats
-GitSkins stat widgets will use the **Aurora** theme.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -50,7 +50,6 @@ GitSkins stat widgets will use the **Aurora** theme.
   </picture>
 </p>
 ## Projects
-Highlights repositories as proof of work.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -58,7 +57,6 @@ Highlights repositories as proof of work.
   </picture>
 </p>
 ## Highlights
-Value-prop feature cards drawn from the profile.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/highlights?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -66,7 +64,6 @@ Value-prop feature cards drawn from the profile.
   </picture>
 </p>
 ## Heatmap
-Animated year-long contribution calendar.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
@@ -74,7 +71,6 @@ Animated year-long contribution calendar.
   </picture>
 </p>
 ## Connect
-Contact and social links will appear here.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/social?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
