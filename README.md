@@ -28,7 +28,6 @@
     <img src="https://www.gitskins.com/api/section/about?username=sxmtryhard&theme=aurora&style=terminal" alt="sxmtryhard about section" />
   </picture>
 </p>
-## Skills
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stack?username=sxmtryhard&theme=aurora&style=terminal&mode=light" />
