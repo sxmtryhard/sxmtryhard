@@ -1,6 +1,6 @@
 # sxmtryhard
 
-> Memorable developer positioning.
+> Student of Software Engineering
 
 **Theme:** Aurora · **Style:** Creative · **Agent:** Full-Stack Engineer
 
