@@ -46,7 +46,7 @@
     font-size="25"
     font-family="monospace"
 >
-    45
+    42
 </text>
 
 <text
@@ -2487,7 +2487,7 @@
                 height="13"
                 rx="3"
                 fill="#f0f6fc"
-                opacity="0.25"
+                opacity="0.45"
             >
                 <title>
                     2026-05-01
@@ -4220,7 +4220,7 @@
                 <title>
                     2026-08-05
                     ·
-                    2
+                    1
                     contributions
                 </title>
             </rect>
@@ -4341,12 +4341,12 @@
                 height="13"
                 rx="3"
                 fill="#f0f6fc"
-                opacity="0.7"
+                opacity="1.0"
             >
                 <title>
                     2026-08-12
                     ·
-                    6
+                    4
                     contributions
                 </title>
             </rect>
@@ -4359,7 +4359,7 @@
                 height="13"
                 rx="3"
                 fill="#f0f6fc"
-                opacity="0.7"
+                opacity="1.0"
             >
                 <title>
                     2026-08-13
@@ -4435,6 +4435,24 @@
             >
                 <title>
                     2026-08-17
+                    ·
+                    0
+                    contributions
+                </title>
+            </rect>
+            
+
+            <rect
+                x="631"
+                y="204"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#f0f6fc"
+                opacity="0.08"
+            >
+                <title>
+                    2026-08-18
                     ·
                     0
                     contributions
