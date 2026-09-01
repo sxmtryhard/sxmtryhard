@@ -61,7 +61,7 @@
         font-size="28"
         font-family="monospace"
     >
-        2
+        3
     </text>
 
     <text
@@ -166,7 +166,7 @@
                 font-size="13"
                 font-family="monospace"
             >
-                Python
+                HTML
             </text>
 
             <rect
@@ -181,7 +181,7 @@
             <rect
                 x="180"
                 y="379"
-                width="430"
+                width="215"
                 height="5"
                 rx="2.5"
                 fill="#f0f6fc"
@@ -194,7 +194,46 @@
                 font-size="12"
                 font-family="monospace"
             >
-                100%
+                50%
+            </text>
+            
+
+            <text
+                x="70"
+                y="432"
+                fill="#c9d1d9"
+                font-size="13"
+                font-family="monospace"
+            >
+                Python
+            </text>
+
+            <rect
+                x="180"
+                y="421"
+                width="430"
+                height="5"
+                rx="2.5"
+                fill="#21262d"
+            />
+
+            <rect
+                x="180"
+                y="421"
+                width="215"
+                height="5"
+                rx="2.5"
+                fill="#f0f6fc"
+            />
+
+            <text
+                x="635"
+                y="432"
+                fill="#8b949e"
+                font-size="12"
+                font-family="monospace"
+            >
+                50%
             </text>
             
 
