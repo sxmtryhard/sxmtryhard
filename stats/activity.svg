@@ -4694,12 +4694,12 @@
                 height="13"
                 rx="3"
                 fill="#f0f6fc"
-                opacity="0.45"
+                opacity="0.08"
             >
                 <title>
                     2026-08-31
                     ·
-                    2
+                    0
                     contributions
                 </title>
             </rect>
@@ -4712,10 +4712,28 @@
                 height="13"
                 rx="3"
                 fill="#f0f6fc"
-                opacity="0.08"
+                opacity="0.45"
             >
                 <title>
                     2026-09-01
+                    ·
+                    2
+                    contributions
+                </title>
+            </rect>
+            
+
+            <rect
+                x="665"
+                y="221"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#f0f6fc"
+                opacity="0.08"
+            >
+                <title>
+                    2026-09-02
                     ·
                     0
                     contributions
