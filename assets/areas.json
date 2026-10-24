@@ -1,0 +1,12 @@
+{
+  "title": "Areas",
+  "_comment": "Autoevaluacion 0-100. Edita estos valores y el workflow 'Charts and cards' redibuja el radar.",
+  "axes": [
+    { "label": "Frontend",       "value": 80 },
+    { "label": "Backend / APIs", "value": 70 },
+    { "label": "Bases de datos", "value": 60 },
+    { "label": "Git / GitHub",   "value": 75 },
+    { "label": "Linux",          "value": 60 },
+    { "label": "Inglés (B2)",    "value": 72 }
+  ]
+}

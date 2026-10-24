@@ -1,0 +1,13 @@
+{
+  "_comment": "Repos destacados, en el orden del README. Estrellas/forks/lenguaje vienen de la API en cada ejecucion; la descripcion de aqui reemplaza la de GitHub.",
+  "projects": [
+    {
+      "repo": "pediova-app",
+      "description": "App de cálculos clínicos para el manejo de líquidos pediátricos y neonatales. Cálculos por paciente, rápidos y precisos, con una interfaz pensada para móvil y tablet."
+    },
+    {
+      "repo": "adminsite-ppi",
+      "description": "Sistema web de gestión administrativa para el proyecto PPI, construido con React y Firebase."
+    }
+  ]
+}
