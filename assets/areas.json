@@ -6,7 +6,7 @@
     { "label": "Backend / APIs", "value": 70 },
     { "label": "Bases de datos", "value": 60 },
     { "label": "Git / GitHub",   "value": 75 },
-    { "label": "Linux",          "value": 60 },
+    { "label": "Windows / Linux", "value": 60 },
     { "label": "Inglés (B2)",    "value": 72 }
   ]
 }

@@ -35,7 +35,7 @@ Hola, soy **Samuel**, estudiante de **Ingeniería de Software** con enfoque en d
 - 🎓 Estudiando **Ingeniería de Software** y construyendo proyectos reales mientras aprendo.
 - 🛠️ Trabajo en frontend con **React** y en backend con **Java + Spring Boot** y **Python**.
 - 🎥 Tengo un canal de YouTube: **[@sxmuuuu](https://www.youtube.com/@sxmuuuu)**.
-- 🐧 Me gusta trabajar en **Linux** y entender cómo funcionan las cosas por dentro.
+- 💻 Trabajo mayormente en **Windows** y también en **Linux** 🐧.
 - 🌎 Hablo **español** (nativo) e **inglés** (B2).
 
 <br>
@@ -44,7 +44,7 @@ Hola, soy **Samuel**, estudiante de **Ingeniería de Software** con enfoque en d
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=react,java,spring,python,html,css,js,ts,git,github,linux,vscode&perline=6" alt="tech stack">
+<img src="https://skillicons.dev/icons?i=react,java,spring,python,html,css,js,ts,git,github,windows,linux,vscode&perline=7" alt="tech stack">
 
 </div>
 

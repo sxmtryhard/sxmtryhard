@@ -48,7 +48,7 @@ ROWS = [
     ("Core.Frontend", "React · HTML · CSS"),
     ("Core.Backend", "Spring Boot · Python"),
     ("ToolChain", "Git · GitHub · VS Code"),
-    ("OS", "Linux"),
+    ("OS", "Windows · Linux"),
     ("Grid.GitHub", "sxmtryhard"),
     ("Grid.YouTube", "@sxmuuuu"),
 ]
