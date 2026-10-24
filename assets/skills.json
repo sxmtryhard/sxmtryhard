@@ -2,12 +2,37 @@
   "title": "Tech Stack",
   "_comment": "Autoevaluacion 0-100. Edita estos valores y el workflow 'Charts and cards' redibuja el radar.",
   "axes": [
-    { "label": "Java",        "value": 75 },
-    { "label": "Spring Boot", "value": 65 },
-    { "label": "Python",      "value": 70 },
-    { "label": "TypeScript",  "value": 70 },
-    { "label": "JavaScript",  "value": 75 },
-    { "label": "React",       "value": 75 },
-    { "label": "HTML / CSS",  "value": 85 }
+    {
+      "label": "Java",
+      "value": 75
+    },
+    {
+      "label": "Spring Boot",
+      "value": 65
+    },
+    {
+      "label": "Python",
+      "value": 70
+    },
+    {
+      "label": "TypeScript",
+      "value": 70
+    },
+    {
+      "label": "JavaScript",
+      "value": 75
+    },
+    {
+      "label": "SQL",
+      "value": 70
+    },
+    {
+      "label": "React",
+      "value": 75
+    },
+    {
+      "label": "HTML / CSS",
+      "value": 85
+    }
   ]
 }

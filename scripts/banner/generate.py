@@ -45,8 +45,9 @@ ROWS = [
     ("Status", "Learning + Building + Shipping"),
     ("Speaks", "Español (native) · English (B2)"),
     ("Core.Lang", "Java · Python · TypeScript · JavaScript"),
-    ("Core.Frontend", "React · HTML · CSS"),
-    ("Core.Backend", "Spring Boot · Python"),
+    ("Core.Frontend", "React · Next.js · Tailwind · HTML · CSS"),
+    ("Core.Backend", "Spring Boot · Node.js · Express · Python"),
+    ("Core.Database", "SQL · PostgreSQL · SQLite · Firebase"),
     ("ToolChain", "Git · GitHub · VS Code"),
     ("OS", "Windows · Linux"),
     ("Grid.GitHub", "sxmtryhard"),
@@ -393,7 +394,7 @@ def render_svg(
     )
 
     value_right = 1127.0
-    row_spacing = 29.0
+    row_spacing = 27.0
     row_y = 160.0
     for label, value in ROWS:
         value_len = text_width(value, 14)

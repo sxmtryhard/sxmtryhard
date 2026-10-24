@@ -33,7 +33,9 @@
 Hola, soy **Samuel**, estudiante de **Ingeniería de Software** con enfoque en desarrollo full-stack.
 
 - 🎓 Estudiando **Ingeniería de Software** y construyendo proyectos reales mientras aprendo.
-- 🛠️ Trabajo en frontend con **React** y en backend con **Java + Spring Boot** y **Python**.
+- 🛠️ Frontend con **React**, **Next.js** y **Tailwind**; backend con **Java + Spring Boot**, **Node.js + Express** y **Python**.
+- 🗄️ Bases de datos **SQL** (**PostgreSQL**, **SQLite**) con **Sequelize** y **Prisma**, y **Firebase**.
+- 🧪 Pruebas con **Vitest** y **Playwright**.
 - 🎥 Tengo un canal de YouTube: **[@sxmuuuu](https://www.youtube.com/@sxmuuuu)**.
 - 💻 Trabajo mayormente en **Windows** y también en **Linux** 🐧.
 - 🌎 Hablo **español** (nativo) e **inglés** (B2).
@@ -44,7 +46,7 @@ Hola, soy **Samuel**, estudiante de **Ingeniería de Software** con enfoque en d
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=react,java,spring,python,html,css,js,ts,git,github,windows,linux,vscode&perline=7" alt="tech stack">
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind,vite,java,spring,python,nodejs,express,postgres,sqlite,prisma,firebase,git,github,windows,linux,vscode&perline=11" alt="tech stack">
 
 </div>
 
